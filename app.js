@@ -27,6 +27,7 @@ app.use(express.static('public', options))
 // #############################################################################
 // Catch all handler for all other request.
 app.use('*', (req,res) => {
+  console.log(req);
   res.json({
       at: new Date().toISOString(),
       method: req.method,
